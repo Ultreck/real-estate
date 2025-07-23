@@ -10,10 +10,10 @@ export default function sitemap({}): MetadataRoute.Sitemap {
         return {
             url: `${baseUrl}/properties/${property.slug}`,
             lastModified: new Date().toISOString(),
-            changeFrequency: 'daily',
+            changeFrequency: "daily" as const,
             priority: 0.7,
-            images: [property.image],
-        }
+            images: [typeof property.image === "string" ? property.image : property.image.src],
+        };
     });
     
   return [
@@ -21,5 +21,6 @@ export default function sitemap({}): MetadataRoute.Sitemap {
       url: baseUrl,
       lastModified: new Date().toISOString(),
     },
+    ...productPost,
   ]
 }
