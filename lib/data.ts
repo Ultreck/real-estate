@@ -3,6 +3,8 @@ import house2 from '../assets/house2.webp';
 
 export const properties = [
   {
+    id: 1,
+    price: 300000,
     slug: 'seaside-villa',
     title: 'Seaside Villa',
     description: 'A beautiful villa by the sea.',
@@ -11,6 +13,8 @@ export const properties = [
     isFrozen: false,
   },
   {
+    id: 2,
+    price: 500000,
     slug: 'secret-mountain-cabin',
     title: 'Secret Mountain Cabin',
     description: 'Hidden gem in the mountains.',

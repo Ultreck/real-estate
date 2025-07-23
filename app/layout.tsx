@@ -13,13 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {default: "Real Estate Properties", template: "%s | Real Estate"},
+  title: { default: "Real Estate Properties", template: "%s | Real Estate" },
   metadataBase: new URL("http://localhost:3000"),
   keywords: ["real estate", "properties", "housing"],
-  description: "This is a real estate properties website showcasing various listings.",
+  description:
+    "This is a real estate properties website showcasing various listings.",
   openGraph: {
     title: "Real Estate Properties",
-    description: "Explore our listings of beautiful properties available for rent or purchase.",
+    description:
+      "Explore our listings of beautiful properties available for rent or purchase.",
     url: "http://localhost:3000",
     siteName: "Real Estate Properties",
     images: [
