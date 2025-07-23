@@ -10,7 +10,7 @@ export default function PropertyPage() {
     <>
     <div className="text mt-20 flex items-center justify-center gap-5">
     {propertyList.map((props) => (
-      <Link href={`properties/${props?.slug}`} key={props?.id} className="property-card border">
+      <Link href={`/properties/${props?.slug}`} key={props?.id} className="property-card border">
         <Image
           src={props?.image}
           alt={props?.title}
