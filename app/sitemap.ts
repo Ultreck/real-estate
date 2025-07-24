@@ -2,7 +2,7 @@ import { getProps, properties } from './../lib/data';
 import type { MetadataRoute } from 'next'
  
 export default function sitemap({}): MetadataRoute.Sitemap {
-    const baseUrl = 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_BASE_URL as string;
     const dataProp = getProps();
     console.log(dataProp);
 
