@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 let mockedData = {
     name: "Emma",
-    role: "admin", // Default role
+    role: "renter", // Default role
 };
 
 export async function GET(req: NextRequest) {
