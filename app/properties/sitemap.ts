@@ -1,12 +1,11 @@
-import { getProps } from "./../lib/data";
+import { getProps } from "../../lib/data";
 import type { MetadataRoute } from "next";
 
 export default function sitemap({}): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_BASE_URL as string;
   const dataProp = getProps();
-  console.log(dataProp);
 
-  const productPost = dataProp.map((property) => {
+  const productPost = dataProp?.filter(p => !p.isPrivate)?.map((property) => {
     return {
       url: `${baseUrl}/properties/${property.slug}${property.id}`,
       title: property.title,
@@ -28,6 +27,6 @@ export default function sitemap({}): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
-    ...productPost,
+    ...productPost,  
   ];
 }
